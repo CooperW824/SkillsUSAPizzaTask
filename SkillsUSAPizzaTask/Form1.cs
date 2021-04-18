@@ -17,6 +17,10 @@ namespace SkillsUSAPizzaTask
             InitializeComponent();
         }
         //declaring global vars here
+        Label[] Labels = new Label[24];
+        CheckBox[] CheckBoxes = new CheckBox[14];
+        Button[] Buttons = new Button[2];
+        TextBox[] TextBoxes = new TextBox[2];
 
         int pizza; //pizza counter variable used for hiding aspects of the form and for displaying number of pizzas
         string customer; //customer name var
@@ -28,18 +32,12 @@ namespace SkillsUSAPizzaTask
         private void calculateButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("CALC!");
+            new OutputForm().Show();
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("CLEAR!");
-        }
-
-        private void numPizzas_TextChanged(object sender, EventArgs e)
-        {
-            
-
-            
         }
 
         private void orderContinue_Click(object sender, EventArgs e)
@@ -52,7 +50,7 @@ namespace SkillsUSAPizzaTask
             //pizza also gets the int value if valid
                 
 
-                if (!inputValid || pizza > 2)
+                if (!inputValid || pizza > 2 || pizza < 1)
                 {
                     MessageBox.Show("Please Enter a Valid Number of Pizzas.");
                 }
@@ -63,5 +61,14 @@ namespace SkillsUSAPizzaTask
         {
             customer = customerName.Text;
         }
+
+        private void visible(object[] widgetArr, bool vis)
+        {
+            for(int i = 0; i < widgetArr.Length; i++)
+            {
+                //widgetArr[i].Visible = vis;
+            }
+        }
+
     }
 }

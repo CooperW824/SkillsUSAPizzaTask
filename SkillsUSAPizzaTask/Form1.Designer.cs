@@ -29,38 +29,54 @@
         private void InitializeComponent()
         {
             this.titleLabel = new System.Windows.Forms.Label();
-            this.customerLabel = new System.Windows.Forms.Label();
-            this.numPizzas = new System.Windows.Forms.TextBox();
             this.pizzaNumberLabel = new System.Windows.Forms.Label();
+            this.numPizzas = new System.Windows.Forms.TextBox();
+            this.customerLabel = new System.Windows.Forms.Label();
             this.customerName = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.calculateButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.pizza1Label = new System.Windows.Forms.Label();
+            this.pizza1LargeLabel = new System.Windows.Forms.Label();
+            this.Pizza1ToppingLabel = new System.Windows.Forms.Label();
+            this.Pizza1TopNumLabel = new System.Windows.Forms.Label();
+            this.pizza1SquareLabel = new System.Windows.Forms.Label();
+            this.pizza1MedLabel = new System.Windows.Forms.Label();
+            this.Pizza1SmallLabel = new System.Windows.Forms.Label();
+            this.pizza1ShapeLabel = new System.Windows.Forms.Label();
+            this.pizza1RoundLabel = new System.Windows.Forms.Label();
+            this.pizza1CrustLabel = new System.Windows.Forms.Label();
+            this.pizza1ThickLabel = new System.Windows.Forms.Label();
+            this.pizza1ThinLabel = new System.Windows.Forms.Label();
+            this.pizza2ThinLabel = new System.Windows.Forms.Label();
+            this.pizza2ThickLabel = new System.Windows.Forms.Label();
+            this.pizza2CrustLabel = new System.Windows.Forms.Label();
+            this.pizza2RoundLabel = new System.Windows.Forms.Label();
+            this.pizza2ShapeLabel = new System.Windows.Forms.Label();
+            this.pizza2SmallLabel = new System.Windows.Forms.Label();
+            this.pizza2MedLabel = new System.Windows.Forms.Label();
+            this.pizza2SquareLabel = new System.Windows.Forms.Label();
+            this.pizza2TopLabel = new System.Windows.Forms.Label();
+            this.pizza2ToppingLabel = new System.Windows.Forms.Label();
+            this.pizza2LargeLabel = new System.Windows.Forms.Label();
+            this.pizza2Label = new System.Windows.Forms.Label();
             this.orderContinue = new System.Windows.Forms.Button();
+            this.pizza1LargeCheck = new System.Windows.Forms.CheckBox();
+            this.pizza1MedCheck = new System.Windows.Forms.CheckBox();
+            this.pizza1SmallCheck = new System.Windows.Forms.CheckBox();
+            this.pizza1RoundCheck = new System.Windows.Forms.CheckBox();
+            this.pizza1SquareCheck = new System.Windows.Forms.CheckBox();
+            this.pizza1ThickCheck = new System.Windows.Forms.CheckBox();
+            this.pizza1ThinCheck = new System.Windows.Forms.CheckBox();
+            this.pizza2LargeCheck = new System.Windows.Forms.CheckBox();
+            this.pizza2MedCheck = new System.Windows.Forms.CheckBox();
+            this.pizza2SmallCheck = new System.Windows.Forms.CheckBox();
+            this.pizza2RoundCheck = new System.Windows.Forms.CheckBox();
+            this.pizza2SquareCheck = new System.Windows.Forms.CheckBox();
+            this.pizza2ThickCheck = new System.Windows.Forms.CheckBox();
+            this.pizza2ThinCheck = new System.Windows.Forms.CheckBox();
+            this.pizza1ToppingIn = new System.Windows.Forms.TextBox();
+            this.pizza2ToppingCheck = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -73,14 +89,14 @@
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Skills Pizza App";
             // 
-            // customerLabel
+            // pizzaNumberLabel
             // 
-            this.customerLabel.AutoSize = true;
-            this.customerLabel.Location = new System.Drawing.Point(152, 104);
-            this.customerLabel.Name = "customerLabel";
-            this.customerLabel.Size = new System.Drawing.Size(130, 17);
-            this.customerLabel.TabIndex = 1;
-            this.customerLabel.Text = "Number Of Pizzas: \r\n";
+            this.pizzaNumberLabel.AutoSize = true;
+            this.pizzaNumberLabel.Location = new System.Drawing.Point(152, 104);
+            this.pizzaNumberLabel.Name = "pizzaNumberLabel";
+            this.pizzaNumberLabel.Size = new System.Drawing.Size(130, 17);
+            this.pizzaNumberLabel.TabIndex = 1;
+            this.pizzaNumberLabel.Text = "Number Of Pizzas: \r\n";
             // 
             // numPizzas
             // 
@@ -88,16 +104,15 @@
             this.numPizzas.Name = "numPizzas";
             this.numPizzas.Size = new System.Drawing.Size(100, 22);
             this.numPizzas.TabIndex = 2;
-            this.numPizzas.TextChanged += new System.EventHandler(this.numPizzas_TextChanged);
             // 
-            // pizzaNumberLabel
+            // customerLabel
             // 
-            this.pizzaNumberLabel.AutoSize = true;
-            this.pizzaNumberLabel.Location = new System.Drawing.Point(165, 76);
-            this.pizzaNumberLabel.Name = "pizzaNumberLabel";
-            this.pizzaNumberLabel.Size = new System.Drawing.Size(117, 17);
-            this.pizzaNumberLabel.TabIndex = 3;
-            this.pizzaNumberLabel.Text = "Customer Name: ";
+            this.customerLabel.AutoSize = true;
+            this.customerLabel.Location = new System.Drawing.Point(165, 76);
+            this.customerLabel.Name = "customerLabel";
+            this.customerLabel.Size = new System.Drawing.Size(117, 17);
+            this.customerLabel.TabIndex = 3;
+            this.customerLabel.Text = "Customer Name: ";
             // 
             // customerName
             // 
@@ -139,221 +154,221 @@
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
-            // label1
+            // pizza1Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 34);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Pizza 1: \r\n\r\n";
+            this.pizza1Label.AutoSize = true;
+            this.pizza1Label.Location = new System.Drawing.Point(152, 195);
+            this.pizza1Label.Name = "pizza1Label";
+            this.pizza1Label.Size = new System.Drawing.Size(62, 34);
+            this.pizza1Label.TabIndex = 8;
+            this.pizza1Label.Text = "Pizza 1: \r\n\r\n";
             // 
-            // label3
+            // pizza1LargeLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(152, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Large:    $15.95";
+            this.pizza1LargeLabel.AutoSize = true;
+            this.pizza1LargeLabel.Location = new System.Drawing.Point(152, 223);
+            this.pizza1LargeLabel.Name = "pizza1LargeLabel";
+            this.pizza1LargeLabel.Size = new System.Drawing.Size(109, 17);
+            this.pizza1LargeLabel.TabIndex = 10;
+            this.pizza1LargeLabel.Text = "Large:    $15.95";
             // 
-            // label4
+            // Pizza1ToppingLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(152, 334);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Toppings Cost";
+            this.Pizza1ToppingLabel.AutoSize = true;
+            this.Pizza1ToppingLabel.Location = new System.Drawing.Point(152, 334);
+            this.Pizza1ToppingLabel.Name = "Pizza1ToppingLabel";
+            this.Pizza1ToppingLabel.Size = new System.Drawing.Size(99, 17);
+            this.Pizza1ToppingLabel.TabIndex = 11;
+            this.Pizza1ToppingLabel.Text = "Toppings Cost";
             // 
-            // label5
+            // Pizza1TopNumLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(152, 360);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "$1.25 per topping: ";
+            this.Pizza1TopNumLabel.AutoSize = true;
+            this.Pizza1TopNumLabel.Location = new System.Drawing.Point(152, 360);
+            this.Pizza1TopNumLabel.Name = "Pizza1TopNumLabel";
+            this.Pizza1TopNumLabel.Size = new System.Drawing.Size(128, 17);
+            this.Pizza1TopNumLabel.TabIndex = 12;
+            this.Pizza1TopNumLabel.Text = "$1.25 per topping: ";
             // 
-            // label6
+            // pizza1SquareLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(152, 452);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Square:";
+            this.pizza1SquareLabel.AutoSize = true;
+            this.pizza1SquareLabel.Location = new System.Drawing.Point(152, 452);
+            this.pizza1SquareLabel.Name = "pizza1SquareLabel";
+            this.pizza1SquareLabel.Size = new System.Drawing.Size(58, 17);
+            this.pizza1SquareLabel.TabIndex = 13;
+            this.pizza1SquareLabel.Text = "Square:";
             // 
-            // label18
+            // pizza1MedLabel
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(153, 251);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 17);
-            this.label18.TabIndex = 25;
-            this.label18.Text = "Medium: $12.95";
+            this.pizza1MedLabel.AutoSize = true;
+            this.pizza1MedLabel.Location = new System.Drawing.Point(153, 251);
+            this.pizza1MedLabel.Name = "pizza1MedLabel";
+            this.pizza1MedLabel.Size = new System.Drawing.Size(109, 17);
+            this.pizza1MedLabel.TabIndex = 25;
+            this.pizza1MedLabel.Text = "Medium: $12.95";
             // 
-            // label19
+            // Pizza1SmallLabel
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(152, 281);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 17);
-            this.label19.TabIndex = 26;
-            this.label19.Text = "Small:     $10.95";
+            this.Pizza1SmallLabel.AutoSize = true;
+            this.Pizza1SmallLabel.Location = new System.Drawing.Point(152, 281);
+            this.Pizza1SmallLabel.Name = "Pizza1SmallLabel";
+            this.Pizza1SmallLabel.Size = new System.Drawing.Size(110, 17);
+            this.Pizza1SmallLabel.TabIndex = 26;
+            this.Pizza1SmallLabel.Text = "Small:     $10.95";
             // 
-            // label20
+            // pizza1ShapeLabel
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(152, 400);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(49, 17);
-            this.label20.TabIndex = 27;
-            this.label20.Text = "Shape";
+            this.pizza1ShapeLabel.AutoSize = true;
+            this.pizza1ShapeLabel.Location = new System.Drawing.Point(152, 400);
+            this.pizza1ShapeLabel.Name = "pizza1ShapeLabel";
+            this.pizza1ShapeLabel.Size = new System.Drawing.Size(49, 17);
+            this.pizza1ShapeLabel.TabIndex = 27;
+            this.pizza1ShapeLabel.Text = "Shape";
             // 
-            // label21
+            // pizza1RoundLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(152, 426);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(54, 17);
-            this.label21.TabIndex = 28;
-            this.label21.Text = "Round:";
+            this.pizza1RoundLabel.AutoSize = true;
+            this.pizza1RoundLabel.Location = new System.Drawing.Point(152, 426);
+            this.pizza1RoundLabel.Name = "pizza1RoundLabel";
+            this.pizza1RoundLabel.Size = new System.Drawing.Size(54, 17);
+            this.pizza1RoundLabel.TabIndex = 28;
+            this.pizza1RoundLabel.Text = "Round:";
             // 
-            // label22
+            // pizza1CrustLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(152, 506);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 17);
-            this.label22.TabIndex = 29;
-            this.label22.Text = "Crust";
+            this.pizza1CrustLabel.AutoSize = true;
+            this.pizza1CrustLabel.Location = new System.Drawing.Point(152, 506);
+            this.pizza1CrustLabel.Name = "pizza1CrustLabel";
+            this.pizza1CrustLabel.Size = new System.Drawing.Size(41, 17);
+            this.pizza1CrustLabel.TabIndex = 29;
+            this.pizza1CrustLabel.Text = "Crust";
             // 
-            // label23
+            // pizza1ThickLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(152, 533);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(46, 17);
-            this.label23.TabIndex = 30;
-            this.label23.Text = "Thick:";
+            this.pizza1ThickLabel.AutoSize = true;
+            this.pizza1ThickLabel.Location = new System.Drawing.Point(152, 533);
+            this.pizza1ThickLabel.Name = "pizza1ThickLabel";
+            this.pizza1ThickLabel.Size = new System.Drawing.Size(46, 17);
+            this.pizza1ThickLabel.TabIndex = 30;
+            this.pizza1ThickLabel.Text = "Thick:";
             // 
-            // label24
+            // pizza1ThinLabel
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(152, 560);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(44, 17);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "Thin: ";
+            this.pizza1ThinLabel.AutoSize = true;
+            this.pizza1ThinLabel.Location = new System.Drawing.Point(152, 560);
+            this.pizza1ThinLabel.Name = "pizza1ThinLabel";
+            this.pizza1ThinLabel.Size = new System.Drawing.Size(44, 17);
+            this.pizza1ThinLabel.TabIndex = 31;
+            this.pizza1ThinLabel.Text = "Thin: ";
             // 
-            // label2
+            // pizza2ThinLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(406, 560);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Thin: ";
+            this.pizza2ThinLabel.AutoSize = true;
+            this.pizza2ThinLabel.Location = new System.Drawing.Point(406, 560);
+            this.pizza2ThinLabel.Name = "pizza2ThinLabel";
+            this.pizza2ThinLabel.Size = new System.Drawing.Size(44, 17);
+            this.pizza2ThinLabel.TabIndex = 43;
+            this.pizza2ThinLabel.Text = "Thin: ";
             // 
-            // label7
+            // pizza2ThickLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(406, 533);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Thick:";
+            this.pizza2ThickLabel.AutoSize = true;
+            this.pizza2ThickLabel.Location = new System.Drawing.Point(406, 533);
+            this.pizza2ThickLabel.Name = "pizza2ThickLabel";
+            this.pizza2ThickLabel.Size = new System.Drawing.Size(46, 17);
+            this.pizza2ThickLabel.TabIndex = 42;
+            this.pizza2ThickLabel.Text = "Thick:";
             // 
-            // label8
+            // pizza2CrustLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(406, 506);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 17);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Crust";
+            this.pizza2CrustLabel.AutoSize = true;
+            this.pizza2CrustLabel.Location = new System.Drawing.Point(406, 506);
+            this.pizza2CrustLabel.Name = "pizza2CrustLabel";
+            this.pizza2CrustLabel.Size = new System.Drawing.Size(41, 17);
+            this.pizza2CrustLabel.TabIndex = 41;
+            this.pizza2CrustLabel.Text = "Crust";
             // 
-            // label9
+            // pizza2RoundLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(406, 426);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 17);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Round:";
+            this.pizza2RoundLabel.AutoSize = true;
+            this.pizza2RoundLabel.Location = new System.Drawing.Point(406, 426);
+            this.pizza2RoundLabel.Name = "pizza2RoundLabel";
+            this.pizza2RoundLabel.Size = new System.Drawing.Size(54, 17);
+            this.pizza2RoundLabel.TabIndex = 40;
+            this.pizza2RoundLabel.Text = "Round:";
             // 
-            // label10
+            // pizza2ShapeLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(406, 400);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 17);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "Shape";
+            this.pizza2ShapeLabel.AutoSize = true;
+            this.pizza2ShapeLabel.Location = new System.Drawing.Point(406, 400);
+            this.pizza2ShapeLabel.Name = "pizza2ShapeLabel";
+            this.pizza2ShapeLabel.Size = new System.Drawing.Size(49, 17);
+            this.pizza2ShapeLabel.TabIndex = 39;
+            this.pizza2ShapeLabel.Text = "Shape";
             // 
-            // label11
+            // pizza2SmallLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(406, 281);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 17);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Small:     $10.95";
+            this.pizza2SmallLabel.AutoSize = true;
+            this.pizza2SmallLabel.Location = new System.Drawing.Point(406, 281);
+            this.pizza2SmallLabel.Name = "pizza2SmallLabel";
+            this.pizza2SmallLabel.Size = new System.Drawing.Size(110, 17);
+            this.pizza2SmallLabel.TabIndex = 38;
+            this.pizza2SmallLabel.Text = "Small:     $10.95";
             // 
-            // label12
+            // pizza2MedLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(407, 251);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 17);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Medium: $12.95";
+            this.pizza2MedLabel.AutoSize = true;
+            this.pizza2MedLabel.Location = new System.Drawing.Point(407, 251);
+            this.pizza2MedLabel.Name = "pizza2MedLabel";
+            this.pizza2MedLabel.Size = new System.Drawing.Size(109, 17);
+            this.pizza2MedLabel.TabIndex = 37;
+            this.pizza2MedLabel.Text = "Medium: $12.95";
             // 
-            // label13
+            // pizza2SquareLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(406, 452);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 17);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Square:";
+            this.pizza2SquareLabel.AutoSize = true;
+            this.pizza2SquareLabel.Location = new System.Drawing.Point(406, 452);
+            this.pizza2SquareLabel.Name = "pizza2SquareLabel";
+            this.pizza2SquareLabel.Size = new System.Drawing.Size(58, 17);
+            this.pizza2SquareLabel.TabIndex = 36;
+            this.pizza2SquareLabel.Text = "Square:";
             // 
-            // label14
+            // pizza2TopLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(406, 360);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(128, 17);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "$1.25 per topping: ";
+            this.pizza2TopLabel.AutoSize = true;
+            this.pizza2TopLabel.Location = new System.Drawing.Point(406, 360);
+            this.pizza2TopLabel.Name = "pizza2TopLabel";
+            this.pizza2TopLabel.Size = new System.Drawing.Size(128, 17);
+            this.pizza2TopLabel.TabIndex = 35;
+            this.pizza2TopLabel.Text = "$1.25 per topping: ";
             // 
-            // label15
+            // pizza2ToppingLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(406, 334);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 17);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "Toppings Cost";
+            this.pizza2ToppingLabel.AutoSize = true;
+            this.pizza2ToppingLabel.Location = new System.Drawing.Point(406, 334);
+            this.pizza2ToppingLabel.Name = "pizza2ToppingLabel";
+            this.pizza2ToppingLabel.Size = new System.Drawing.Size(99, 17);
+            this.pizza2ToppingLabel.TabIndex = 34;
+            this.pizza2ToppingLabel.Text = "Toppings Cost";
             // 
-            // label16
+            // pizza2LargeLabel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(406, 223);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 17);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "Large:    $15.95";
+            this.pizza2LargeLabel.AutoSize = true;
+            this.pizza2LargeLabel.Location = new System.Drawing.Point(406, 223);
+            this.pizza2LargeLabel.Name = "pizza2LargeLabel";
+            this.pizza2LargeLabel.Size = new System.Drawing.Size(109, 17);
+            this.pizza2LargeLabel.TabIndex = 33;
+            this.pizza2LargeLabel.Text = "Large:    $15.95";
             // 
-            // label17
+            // pizza2Label
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(406, 195);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 34);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "Pizza 2: \r\n\r\n";
+            this.pizza2Label.AutoSize = true;
+            this.pizza2Label.Location = new System.Drawing.Point(406, 195);
+            this.pizza2Label.Name = "pizza2Label";
+            this.pizza2Label.Size = new System.Drawing.Size(62, 34);
+            this.pizza2Label.TabIndex = 32;
+            this.pizza2Label.Text = "Pizza 2: \r\n\r\n";
             // 
             // orderContinue
             // 
@@ -366,44 +381,201 @@
             this.orderContinue.UseVisualStyleBackColor = true;
             this.orderContinue.Click += new System.EventHandler(this.orderContinue_Click);
             // 
+            // pizza1LargeCheck
+            // 
+            this.pizza1LargeCheck.AutoSize = true;
+            this.pizza1LargeCheck.Location = new System.Drawing.Point(267, 223);
+            this.pizza1LargeCheck.Name = "pizza1LargeCheck";
+            this.pizza1LargeCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza1LargeCheck.TabIndex = 45;
+            this.pizza1LargeCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza1MedCheck
+            // 
+            this.pizza1MedCheck.AutoSize = true;
+            this.pizza1MedCheck.Location = new System.Drawing.Point(267, 251);
+            this.pizza1MedCheck.Name = "pizza1MedCheck";
+            this.pizza1MedCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza1MedCheck.TabIndex = 46;
+            this.pizza1MedCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza1SmallCheck
+            // 
+            this.pizza1SmallCheck.AutoSize = true;
+            this.pizza1SmallCheck.Location = new System.Drawing.Point(267, 277);
+            this.pizza1SmallCheck.Name = "pizza1SmallCheck";
+            this.pizza1SmallCheck.Size = new System.Drawing.Size(30, 21);
+            this.pizza1SmallCheck.TabIndex = 47;
+            this.pizza1SmallCheck.Text = "\r\n";
+            this.pizza1SmallCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza1RoundCheck
+            // 
+            this.pizza1RoundCheck.AutoSize = true;
+            this.pizza1RoundCheck.Location = new System.Drawing.Point(212, 426);
+            this.pizza1RoundCheck.Name = "pizza1RoundCheck";
+            this.pizza1RoundCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza1RoundCheck.TabIndex = 48;
+            this.pizza1RoundCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza1SquareCheck
+            // 
+            this.pizza1SquareCheck.AutoSize = true;
+            this.pizza1SquareCheck.Location = new System.Drawing.Point(212, 453);
+            this.pizza1SquareCheck.Name = "pizza1SquareCheck";
+            this.pizza1SquareCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza1SquareCheck.TabIndex = 49;
+            this.pizza1SquareCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza1ThickCheck
+            // 
+            this.pizza1ThickCheck.AutoSize = true;
+            this.pizza1ThickCheck.Location = new System.Drawing.Point(204, 534);
+            this.pizza1ThickCheck.Name = "pizza1ThickCheck";
+            this.pizza1ThickCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza1ThickCheck.TabIndex = 50;
+            this.pizza1ThickCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza1ThinCheck
+            // 
+            this.pizza1ThinCheck.AutoSize = true;
+            this.pizza1ThinCheck.Location = new System.Drawing.Point(204, 561);
+            this.pizza1ThinCheck.Name = "pizza1ThinCheck";
+            this.pizza1ThinCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza1ThinCheck.TabIndex = 51;
+            this.pizza1ThinCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza2LargeCheck
+            // 
+            this.pizza2LargeCheck.AutoSize = true;
+            this.pizza2LargeCheck.Location = new System.Drawing.Point(521, 223);
+            this.pizza2LargeCheck.Name = "pizza2LargeCheck";
+            this.pizza2LargeCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza2LargeCheck.TabIndex = 52;
+            this.pizza2LargeCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza2MedCheck
+            // 
+            this.pizza2MedCheck.AutoSize = true;
+            this.pizza2MedCheck.Location = new System.Drawing.Point(521, 252);
+            this.pizza2MedCheck.Name = "pizza2MedCheck";
+            this.pizza2MedCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza2MedCheck.TabIndex = 53;
+            this.pizza2MedCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza2SmallCheck
+            // 
+            this.pizza2SmallCheck.AutoSize = true;
+            this.pizza2SmallCheck.Location = new System.Drawing.Point(521, 281);
+            this.pizza2SmallCheck.Name = "pizza2SmallCheck";
+            this.pizza2SmallCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza2SmallCheck.TabIndex = 54;
+            this.pizza2SmallCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza2RoundCheck
+            // 
+            this.pizza2RoundCheck.AutoSize = true;
+            this.pizza2RoundCheck.Location = new System.Drawing.Point(466, 427);
+            this.pizza2RoundCheck.Name = "pizza2RoundCheck";
+            this.pizza2RoundCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza2RoundCheck.TabIndex = 55;
+            this.pizza2RoundCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza2SquareCheck
+            // 
+            this.pizza2SquareCheck.AutoSize = true;
+            this.pizza2SquareCheck.Location = new System.Drawing.Point(466, 453);
+            this.pizza2SquareCheck.Name = "pizza2SquareCheck";
+            this.pizza2SquareCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza2SquareCheck.TabIndex = 56;
+            this.pizza2SquareCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza2ThickCheck
+            // 
+            this.pizza2ThickCheck.AutoSize = true;
+            this.pizza2ThickCheck.Location = new System.Drawing.Point(458, 533);
+            this.pizza2ThickCheck.Name = "pizza2ThickCheck";
+            this.pizza2ThickCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza2ThickCheck.TabIndex = 57;
+            this.pizza2ThickCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza2ThinCheck
+            // 
+            this.pizza2ThinCheck.AutoSize = true;
+            this.pizza2ThinCheck.Location = new System.Drawing.Point(458, 560);
+            this.pizza2ThinCheck.Name = "pizza2ThinCheck";
+            this.pizza2ThinCheck.Size = new System.Drawing.Size(18, 17);
+            this.pizza2ThinCheck.TabIndex = 58;
+            this.pizza2ThinCheck.UseVisualStyleBackColor = true;
+            // 
+            // pizza1ToppingIn
+            // 
+            this.pizza1ToppingIn.Location = new System.Drawing.Point(276, 360);
+            this.pizza1ToppingIn.Name = "pizza1ToppingIn";
+            this.pizza1ToppingIn.Size = new System.Drawing.Size(36, 22);
+            this.pizza1ToppingIn.TabIndex = 59;
+            // 
+            // pizza2ToppingCheck
+            // 
+            this.pizza2ToppingCheck.Location = new System.Drawing.Point(531, 360);
+            this.pizza2ToppingCheck.Name = "pizza2ToppingCheck";
+            this.pizza2ToppingCheck.Size = new System.Drawing.Size(36, 22);
+            this.pizza2ToppingCheck.TabIndex = 60;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(619, 677);
+            this.Controls.Add(this.pizza2ToppingCheck);
+            this.Controls.Add(this.pizza1ToppingIn);
+            this.Controls.Add(this.pizza2ThinCheck);
+            this.Controls.Add(this.pizza2ThickCheck);
+            this.Controls.Add(this.pizza2SquareCheck);
+            this.Controls.Add(this.pizza2RoundCheck);
+            this.Controls.Add(this.pizza2SmallCheck);
+            this.Controls.Add(this.pizza2MedCheck);
+            this.Controls.Add(this.pizza2LargeCheck);
+            this.Controls.Add(this.pizza1ThinCheck);
+            this.Controls.Add(this.pizza1ThickCheck);
+            this.Controls.Add(this.pizza1SquareCheck);
+            this.Controls.Add(this.pizza1RoundCheck);
+            this.Controls.Add(this.pizza1SmallCheck);
+            this.Controls.Add(this.pizza1MedCheck);
+            this.Controls.Add(this.pizza1LargeCheck);
             this.Controls.Add(this.orderContinue);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pizza2ThinLabel);
+            this.Controls.Add(this.pizza2ThickLabel);
+            this.Controls.Add(this.pizza2CrustLabel);
+            this.Controls.Add(this.pizza2RoundLabel);
+            this.Controls.Add(this.pizza2ShapeLabel);
+            this.Controls.Add(this.pizza2SmallLabel);
+            this.Controls.Add(this.pizza2MedLabel);
+            this.Controls.Add(this.pizza2SquareLabel);
+            this.Controls.Add(this.pizza2TopLabel);
+            this.Controls.Add(this.pizza2ToppingLabel);
+            this.Controls.Add(this.pizza2LargeLabel);
+            this.Controls.Add(this.pizza2Label);
+            this.Controls.Add(this.pizza1ThinLabel);
+            this.Controls.Add(this.pizza1ThickLabel);
+            this.Controls.Add(this.pizza1CrustLabel);
+            this.Controls.Add(this.pizza1RoundLabel);
+            this.Controls.Add(this.pizza1ShapeLabel);
+            this.Controls.Add(this.Pizza1SmallLabel);
+            this.Controls.Add(this.pizza1MedLabel);
+            this.Controls.Add(this.pizza1SquareLabel);
+            this.Controls.Add(this.Pizza1TopNumLabel);
+            this.Controls.Add(this.Pizza1ToppingLabel);
+            this.Controls.Add(this.pizza1LargeLabel);
+            this.Controls.Add(this.pizza1Label);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.customerName);
-            this.Controls.Add(this.pizzaNumberLabel);
-            this.Controls.Add(this.numPizzas);
             this.Controls.Add(this.customerLabel);
+            this.Controls.Add(this.numPizzas);
+            this.Controls.Add(this.pizzaNumberLabel);
             this.Controls.Add(this.titleLabel);
             this.Name = "Form1";
             this.Text = "Skills Pizza";
@@ -415,38 +587,54 @@
         #endregion
 
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Label customerLabel;
-        private System.Windows.Forms.TextBox numPizzas;
         private System.Windows.Forms.Label pizzaNumberLabel;
+        private System.Windows.Forms.TextBox numPizzas;
+        private System.Windows.Forms.Label customerLabel;
         private System.Windows.Forms.TextBox customerName;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button calculateButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label pizza1Label;
+        private System.Windows.Forms.Label pizza1LargeLabel;
+        private System.Windows.Forms.Label Pizza1ToppingLabel;
+        private System.Windows.Forms.Label Pizza1TopNumLabel;
+        private System.Windows.Forms.Label pizza1SquareLabel;
+        private System.Windows.Forms.Label pizza1MedLabel;
+        private System.Windows.Forms.Label Pizza1SmallLabel;
+        private System.Windows.Forms.Label pizza1ShapeLabel;
+        private System.Windows.Forms.Label pizza1RoundLabel;
+        private System.Windows.Forms.Label pizza1CrustLabel;
+        private System.Windows.Forms.Label pizza1ThickLabel;
+        private System.Windows.Forms.Label pizza1ThinLabel;
+        private System.Windows.Forms.Label pizza2ThinLabel;
+        private System.Windows.Forms.Label pizza2ThickLabel;
+        private System.Windows.Forms.Label pizza2CrustLabel;
+        private System.Windows.Forms.Label pizza2RoundLabel;
+        private System.Windows.Forms.Label pizza2ShapeLabel;
+        private System.Windows.Forms.Label pizza2SmallLabel;
+        private System.Windows.Forms.Label pizza2MedLabel;
+        private System.Windows.Forms.Label pizza2SquareLabel;
+        private System.Windows.Forms.Label pizza2TopLabel;
+        private System.Windows.Forms.Label pizza2ToppingLabel;
+        private System.Windows.Forms.Label pizza2LargeLabel;
+        private System.Windows.Forms.Label pizza2Label;
         private System.Windows.Forms.Button orderContinue;
+        private System.Windows.Forms.CheckBox pizza1LargeCheck;
+        private System.Windows.Forms.CheckBox pizza1MedCheck;
+        private System.Windows.Forms.CheckBox pizza1SmallCheck;
+        private System.Windows.Forms.CheckBox pizza1RoundCheck;
+        private System.Windows.Forms.CheckBox pizza1SquareCheck;
+        private System.Windows.Forms.CheckBox pizza1ThickCheck;
+        private System.Windows.Forms.CheckBox pizza1ThinCheck;
+        private System.Windows.Forms.CheckBox pizza2LargeCheck;
+        private System.Windows.Forms.CheckBox pizza2MedCheck;
+        private System.Windows.Forms.CheckBox pizza2SmallCheck;
+        private System.Windows.Forms.CheckBox pizza2RoundCheck;
+        private System.Windows.Forms.CheckBox pizza2SquareCheck;
+        private System.Windows.Forms.CheckBox pizza2ThickCheck;
+        private System.Windows.Forms.CheckBox pizza2ThinCheck;
+        private System.Windows.Forms.TextBox pizza1ToppingIn;
+        private System.Windows.Forms.TextBox pizza2ToppingCheck;
     }
 }
 

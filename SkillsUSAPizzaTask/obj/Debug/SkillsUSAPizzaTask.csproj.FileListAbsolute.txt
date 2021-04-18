@@ -8,3 +8,4 @@ C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAP
 C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Debug\SkillsUSAPizzaTask.csproj.CoreCompileInputs.cache
 C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Debug\SkillsUSAPizzaTask.exe
 C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Debug\SkillsUSAPizzaTask.pdb
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Debug\SkillsUSAPizzaTask.OutputForm.resources
