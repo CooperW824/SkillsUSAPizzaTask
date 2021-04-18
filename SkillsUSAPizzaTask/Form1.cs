@@ -35,13 +35,6 @@ namespace SkillsUSAPizzaTask
             MessageBox.Show("CLEAR!");
         }
 
-        private void numPizzas_TextChanged(object sender, EventArgs e)
-        {
-            
-
-            
-        }
-
         private void orderContinue_Click(object sender, EventArgs e)
         {
            
@@ -52,7 +45,7 @@ namespace SkillsUSAPizzaTask
             //pizza also gets the int value if valid
                 
 
-                if (!inputValid || pizza > 2)
+                if (!inputValid || pizza > 2 || pizza < 1)
                 {
                     MessageBox.Show("Please Enter a Valid Number of Pizzas.");
                 }
