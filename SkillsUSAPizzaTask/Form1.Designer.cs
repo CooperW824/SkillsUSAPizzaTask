@@ -1,6 +1,6 @@
 ﻿namespace SkillsUSAPizzaTask
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -76,7 +76,7 @@
             this.pizza2ThickCheck = new System.Windows.Forms.CheckBox();
             this.pizza2ThinCheck = new System.Windows.Forms.CheckBox();
             this.pizza1ToppingIn = new System.Windows.Forms.TextBox();
-            this.pizza2ToppingCheck = new System.Windows.Forms.TextBox();
+            this.pizza2ToppingIn = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -515,20 +515,20 @@
             this.pizza1ToppingIn.Size = new System.Drawing.Size(36, 22);
             this.pizza1ToppingIn.TabIndex = 59;
             // 
-            // pizza2ToppingCheck
+            // pizza2ToppingIn
             // 
-            this.pizza2ToppingCheck.Location = new System.Drawing.Point(531, 360);
-            this.pizza2ToppingCheck.Name = "pizza2ToppingCheck";
-            this.pizza2ToppingCheck.Size = new System.Drawing.Size(36, 22);
-            this.pizza2ToppingCheck.TabIndex = 60;
+            this.pizza2ToppingIn.Location = new System.Drawing.Point(531, 360);
+            this.pizza2ToppingIn.Name = "pizza2ToppingIn";
+            this.pizza2ToppingIn.Size = new System.Drawing.Size(36, 22);
+            this.pizza2ToppingIn.TabIndex = 60;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(619, 677);
-            this.Controls.Add(this.pizza2ToppingCheck);
+            this.Controls.Add(this.pizza2ToppingIn);
             this.Controls.Add(this.pizza1ToppingIn);
             this.Controls.Add(this.pizza2ThinCheck);
             this.Controls.Add(this.pizza2ThickCheck);
@@ -577,8 +577,9 @@
             this.Controls.Add(this.numPizzas);
             this.Controls.Add(this.pizzaNumberLabel);
             this.Controls.Add(this.titleLabel);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Skills Pizza";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,7 +635,7 @@
         private System.Windows.Forms.CheckBox pizza2ThickCheck;
         private System.Windows.Forms.CheckBox pizza2ThinCheck;
         private System.Windows.Forms.TextBox pizza1ToppingIn;
-        private System.Windows.Forms.TextBox pizza2ToppingCheck;
+        private System.Windows.Forms.TextBox pizza2ToppingIn;
     }
 }
 
