@@ -74,7 +74,7 @@
             // 
             this.pizza1Output.AutoSize = true;
             this.pizza1Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pizza1Output.Location = new System.Drawing.Point(153, 141);
+            this.pizza1Output.Location = new System.Drawing.Point(108, 141);
             this.pizza1Output.Name = "pizza1Output";
             this.pizza1Output.Size = new System.Drawing.Size(95, 29);
             this.pizza1Output.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             this.pizza2Output.AutoSize = true;
             this.pizza2Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pizza2Output.Location = new System.Drawing.Point(455, 141);
+            this.pizza2Output.Location = new System.Drawing.Point(390, 141);
             this.pizza2Output.Name = "pizza2Output";
             this.pizza2Output.Size = new System.Drawing.Size(95, 29);
             this.pizza2Output.TabIndex = 4;
