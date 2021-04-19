@@ -389,6 +389,7 @@
             this.pizza1LargeCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1LargeCheck.TabIndex = 45;
             this.pizza1LargeCheck.UseVisualStyleBackColor = true;
+            this.pizza1LargeCheck.CheckedChanged += new System.EventHandler(this.pizza1LargeCheck_CheckedChanged);
             // 
             // pizza1MedCheck
             // 
@@ -398,6 +399,7 @@
             this.pizza1MedCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1MedCheck.TabIndex = 46;
             this.pizza1MedCheck.UseVisualStyleBackColor = true;
+            this.pizza1MedCheck.CheckedChanged += new System.EventHandler(this.pizza1MedCheck_CheckedChanged);
             // 
             // pizza1SmallCheck
             // 
@@ -408,6 +410,7 @@
             this.pizza1SmallCheck.TabIndex = 47;
             this.pizza1SmallCheck.Text = "\r\n";
             this.pizza1SmallCheck.UseVisualStyleBackColor = true;
+            this.pizza1SmallCheck.CheckedChanged += new System.EventHandler(this.pizza1SmallCheck_CheckedChanged);
             // 
             // pizza1RoundCheck
             // 
@@ -417,6 +420,7 @@
             this.pizza1RoundCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1RoundCheck.TabIndex = 48;
             this.pizza1RoundCheck.UseVisualStyleBackColor = true;
+            this.pizza1RoundCheck.CheckedChanged += new System.EventHandler(this.pizza1RoundCheck_CheckedChanged);
             // 
             // pizza1SquareCheck
             // 
@@ -426,6 +430,7 @@
             this.pizza1SquareCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1SquareCheck.TabIndex = 49;
             this.pizza1SquareCheck.UseVisualStyleBackColor = true;
+            this.pizza1SquareCheck.CheckedChanged += new System.EventHandler(this.pizza1SquareCheck_CheckedChanged);
             // 
             // pizza1ThickCheck
             // 
@@ -453,6 +458,7 @@
             this.pizza2LargeCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2LargeCheck.TabIndex = 52;
             this.pizza2LargeCheck.UseVisualStyleBackColor = true;
+            this.pizza2LargeCheck.CheckedChanged += new System.EventHandler(this.pizza2LargeCheck_CheckedChanged);
             // 
             // pizza2MedCheck
             // 
@@ -462,6 +468,7 @@
             this.pizza2MedCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2MedCheck.TabIndex = 53;
             this.pizza2MedCheck.UseVisualStyleBackColor = true;
+            this.pizza2MedCheck.CheckedChanged += new System.EventHandler(this.pizza2MedCheck_CheckedChanged);
             // 
             // pizza2SmallCheck
             // 
@@ -471,6 +478,7 @@
             this.pizza2SmallCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2SmallCheck.TabIndex = 54;
             this.pizza2SmallCheck.UseVisualStyleBackColor = true;
+            this.pizza2SmallCheck.CheckedChanged += new System.EventHandler(this.pizza2SmallCheck_CheckedChanged);
             // 
             // pizza2RoundCheck
             // 
@@ -514,6 +522,7 @@
             this.pizza1ToppingIn.Name = "pizza1ToppingIn";
             this.pizza1ToppingIn.Size = new System.Drawing.Size(36, 22);
             this.pizza1ToppingIn.TabIndex = 59;
+            this.pizza1ToppingIn.Text = "0";
             // 
             // pizza2ToppingIn
             // 
@@ -521,6 +530,7 @@
             this.pizza2ToppingIn.Name = "pizza2ToppingIn";
             this.pizza2ToppingIn.Size = new System.Drawing.Size(36, 22);
             this.pizza2ToppingIn.TabIndex = 60;
+            this.pizza2ToppingIn.Text = "0";
             // 
             // MainForm
             // 

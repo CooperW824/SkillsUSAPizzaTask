@@ -18,6 +18,13 @@ namespace SkillsUSAPizzaTask
 
         int pizza; //pizza counter variable used for hiding aspects of the form and for displaying number of pizzas
         string customer; //customer name var
+        float pizza1Price, pizza2Price;
+        float pizza1toppingPrice, pizza2toppingPrice;
+        bool pizza1size, pizza2size;
+        string pizza1crust = "", pizza2crust = "";
+        string pizza1shape = "", pizza2shape = "";
+        string pizza1output = "", pizza2output = "";
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -113,6 +120,70 @@ namespace SkillsUSAPizzaTask
             }
         }
 
+        private void pizza2LargeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza2LargeCheck.Checked == false)
+            {
+                pizza2size = false;
+            }
+            else
+            {
+                pizza2size = true;
+                pizza2MedCheck.Checked = false;
+                pizza2SmallCheck.Checked = false;
+                pizza2Price = 15.95f;
+            }
+        }
+
+        private void pizza2MedCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza2MedCheck.Checked == false)
+            {
+                pizza2size = false;
+            }
+            else
+            {
+                pizza2size = true;
+                pizza2LargeCheck.Checked = false;
+                pizza2SmallCheck.Checked = false;
+                pizza2Price = 15.95f;
+            }
+        }
+
+        private void pizza1RoundCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza1RoundCheck.Checked == true)
+            {
+                pizza1shape = "Round";
+                pizza1SquareCheck.Checked = false;
+            }
+        }
+
+
+        private void pizza1SquareCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if(pizza1SquareCheck.Checked == true)
+            {
+                pizza1shape = "Square";
+                pizza1RoundCheck.Checked = false;
+            }
+        }
+
+        private void pizza2SmallCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza2SmallCheck.Checked == false)
+            {
+                pizza2size = false;
+            }
+            else
+            {
+                pizza2size = true;
+                pizza2MedCheck.Checked = false;
+                pizza2LargeCheck.Checked = false;
+                pizza2Price = 15.95f;
+            }
+        }
+
         private void checked_boxes(CheckBox[] checkBoxes, bool check)
         {
             for (int i = 0; i < checkBoxes.Length; i++)
@@ -135,6 +206,55 @@ namespace SkillsUSAPizzaTask
             pizza1ToppingIn.Visible = false;
             pizza2ToppingIn.Visible = false;
 
+        }
+
+        private void pizza1LargeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza1LargeCheck.Checked == false)
+            {
+                pizza1size = false;
+            }
+            else
+            {
+                pizza1size = true;
+                pizza1MedCheck.Checked = false;
+                pizza1SmallCheck.Checked = false;
+                pizza1Price = 15.95f;
+            }
+
+
+        }
+
+        private void pizza1MedCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza1LargeCheck.Checked == false)
+            {
+                pizza1size = false;
+            }
+            else
+            {
+                pizza1size = true;
+                pizza1LargeCheck.Checked = false;
+                pizza1SmallCheck.Checked = false;
+                pizza1Price = 12.95f;
+            }
+            
+        }
+
+        private void pizza1SmallCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza1LargeCheck.Checked == false)
+            {
+                pizza1size = false;
+            }
+            else
+            {
+                pizza1size = true;
+                pizza1LargeCheck.Checked = false;
+                pizza1MedCheck.Checked = false;
+                pizza1Price = 10.95f;
+            }
+            
         }
     }
 }
