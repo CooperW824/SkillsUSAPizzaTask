@@ -74,7 +74,7 @@ namespace SkillsUSAPizzaTask
                             }
                         }
                         pizza1Price += pizza1toppingPrice;
-                        //pizza1output = "Size: " + pizza1size;
+                        pizza1output = "Size: " + pizza1size + "\nToppings: " + pizza1toppings.ToString() +" " + pizza1toppingPrice.ToString() + "\nShape: " + pizza1shape + "\nCrust: " + pizza1crust + "\nPrice: " + pizza1Price;
                     }
                     else
                     {
