@@ -125,6 +125,7 @@
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Red;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitButton.Location = new System.Drawing.Point(16, 9);
             this.exitButton.Name = "exitButton";
