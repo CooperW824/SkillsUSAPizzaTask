@@ -33,8 +33,8 @@
             this.closeButton = new System.Windows.Forms.Button();
             this.pizza1Output = new System.Windows.Forms.Label();
             this.pizza2Output = new System.Windows.Forms.Label();
-            this.clearButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
+            this.totalOutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -90,21 +90,10 @@
             this.pizza2Output.TabIndex = 4;
             this.pizza2Output.Text = "Pizza 2:";
             // 
-            // clearButton
-            // 
-            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(395, 585);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(133, 62);
-            this.clearButton.TabIndex = 5;
-            this.clearButton.Text = "Clear";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
-            // 
             // orderButton
             // 
             this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderButton.Location = new System.Drawing.Point(113, 585);
+            this.orderButton.Location = new System.Drawing.Point(245, 421);
             this.orderButton.Name = "orderButton";
             this.orderButton.Size = new System.Drawing.Size(133, 62);
             this.orderButton.TabIndex = 6;
@@ -112,13 +101,23 @@
             this.orderButton.UseVisualStyleBackColor = true;
             this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
+            // totalOutput
+            // 
+            this.totalOutput.AutoSize = true;
+            this.totalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalOutput.Location = new System.Drawing.Point(239, 382);
+            this.totalOutput.Name = "totalOutput";
+            this.totalOutput.Size = new System.Drawing.Size(166, 36);
+            this.totalOutput.TabIndex = 7;
+            this.totalOutput.Text = "Total Cost: ";
+            // 
             // OutputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 659);
+            this.ClientSize = new System.Drawing.Size(690, 489);
+            this.Controls.Add(this.totalOutput);
             this.Controls.Add(this.orderButton);
-            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.pizza2Output);
             this.Controls.Add(this.pizza1Output);
             this.Controls.Add(this.closeButton);
@@ -126,6 +125,7 @@
             this.Controls.Add(this.titleLabel);
             this.Name = "OutputForm";
             this.Text = "Skills Pizza";
+            this.Load += new System.EventHandler(this.OutputForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +138,7 @@
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label pizza1Output;
         private System.Windows.Forms.Label pizza2Output;
-        private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button orderButton;
+        private System.Windows.Forms.Label totalOutput;
     }
 }

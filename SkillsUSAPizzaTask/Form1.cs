@@ -16,15 +16,16 @@ namespace SkillsUSAPizzaTask
         Label[] pizza2Labels;
         CheckBox[] pizza2CheckBoxes;
 
-        int pizza; //pizza counter variable used for hiding aspects of the form and for displaying number of pizzas
-        string customer; //customer name var
+        public static int pizza; //pizza counter variable used for hiding aspects of the form and for displaying number of pizzas
+        public static string customer; //customer name var
         string pizza1size = "", pizza2size = "";
-        float pizza1Price, pizza2Price;
+        public static float pizza1Price = 0.00f, pizza2Price = 0.00f;
         float pizza1toppingPrice, pizza2toppingPrice;
         string pizza1crust = "", pizza2crust = "";
         string pizza1shape = "", pizza2shape = "";
-        string pizza1output = "", pizza2output = "";
-        float totalPrice = 0.00f;
+        public static string pizza1output = "", pizza2output = "";
+        public static float totalPrice = 0.00f;
+        bool continueOrder = false;
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -36,6 +37,8 @@ namespace SkillsUSAPizzaTask
             int pizza1toppings, pizza2toppings;
             bool pizza1topvalid = Int32.TryParse(pizza1ToppingIn.Text, out pizza1toppings);
             bool pizza2topvalid = Int32.TryParse(pizza2ToppingIn.Text, out pizza2toppings);
+            totalPrice = 0.00f;
+           
 
             if (pizza1topvalid == true && pizza1toppings > -1)
             {
@@ -44,84 +47,95 @@ namespace SkillsUSAPizzaTask
             else
             {
                 MessageBox.Show("Please enter a valid number of toppings for Pizza 1. (>= 0)");
+                continueOrder = false;
             }
 
-            if (pizza2topvalid == true && pizza == 2 && pizza2toppings > -1)
-            {
-                pizza2toppingPrice = pizza2toppings * 1.25f;
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid number of toppings for Pizza 2 (>= 0)");
-            }
+            
             if (pizza1size != "")
             {
-                if(pizza1crust != "")
+                if (pizza1shape != "")
                 {
-                    if(pizza1shape != "")
+                    if (pizza1crust != "")
                     {
-                        if(pizza == 2)
+                        continueOrder = true;
+                        pizza1Price += pizza1toppingPrice;
+                        pizza1output = "Size: " + pizza1size + "\nToppings: " + pizza1toppings.ToString() + " $" + pizza1toppingPrice.ToString() + "\nShape: " + pizza1shape + "\nCrust: " + pizza1crust + "\nPizza 1 Price: $" + pizza1Price;
+                        if (pizza == 2)
                         {
-                            if(pizza2size != "")
+                            if (pizza2topvalid == true && pizza2toppings > -1)
                             {
-                                if(pizza2shape != "")
+                                pizza2toppingPrice = pizza2toppings * 1.25f;
+                                if (pizza2size != "")
                                 {
-                                    if (pizza2crust != "")
+                                    if (pizza2shape != "")
                                     {
-
+                                        if (pizza2crust != "")
+                                        {
+                                            pizza2Price += pizza2toppingPrice;
+                                            pizza2output = "Size: " + pizza2size + "\nToppings: " + pizza2toppings.ToString() + " $" + pizza2toppingPrice.ToString() + "\nShape: " + pizza2shape + "\nCrust: " + pizza2crust + "\nPizza 2 Price: $" + pizza2Price;
+                                            continueOrder = true;
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Please Select a Type of Crust for Pizza 2.");
+                                            continueOrder = false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Please Select a Shape for Pizza 2.");
+                                        continueOrder = false;
                                     }
                                 }
+                                else
+                                {
+                                    MessageBox.Show("Please Select a Size for Pizza 2.");
+                                    continueOrder = false;
+                                }
                             }
+                            else
+                            {
+                                MessageBox.Show("Please enter a valid number of toppings for Pizza 2 (>= 0)");
+                                continueOrder = false;
+                            }
+
                         }
-                        pizza1Price += pizza1toppingPrice;
-                        pizza1output = "Size: " + pizza1size + "\nToppings: " + pizza1toppings.ToString() +" " + pizza1toppingPrice.ToString() + "\nShape: " + pizza1shape + "\nCrust: " + pizza1crust + "\nPrice: " + pizza1Price;
                     }
                     else
                     {
-                        MessageBox.Show("Please Select a Shape for Pizza 1.");
+                        MessageBox.Show("Please Select a Crust Type for Pizza 1.");
+                        continueOrder = false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please Select a Crust Type for Pizza 1.");
+                    MessageBox.Show("Please Select a Shape for Pizza 1.");
+                    continueOrder = false;
                 }
+                
             }
             else
             {
                 MessageBox.Show("Please Select A Size for Pizza 1.");
+                continueOrder = false;
             }
-            new OutputForm().Show();
+
+            
+
+            if (continueOrder)
+            {
+                
+                totalPrice = pizza1Price + pizza2Price;
+                new OutputForm().Show();
+                pizza1Price = 0.00f;
+                pizza2Price = 0.00f;
+                clearForm1();
+            }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            pizza1ToppingIn.Text = "0";
-            pizza2ToppingIn.Text = "0";
-
-            numPizzas.Text = "";
-            customerName.Text = "";
-
-            visible_labels(pizza1Labels, false);
-            visible_labels(pizza2Labels, false);
-            visible_checkboxes(pizza2CheckBoxes, false);
-            visible_checkboxes(pizza1CheckBoxes, false);
-            checked_boxes(pizza2CheckBoxes, false);
-            checked_boxes(pizza1CheckBoxes, false);
-
-            pizza1ToppingIn.Visible = false;
-            pizza2ToppingIn.Visible = false;
-            pizza1Price = 0.00f;
-            pizza2Price = 0.00f;
-            totalPrice = 0.00f;
-
-            pizza1crust = "";
-            pizza2crust = "";
-            pizza1shape = "";
-            pizza2shape = "";
-            pizza1output = ""; 
-            pizza2output = "";
-            pizza1size = "";
-            pizza2size = "";
+            clearForm1();
         }
 
         private void orderContinue_Click(object sender, EventArgs e)
@@ -133,7 +147,7 @@ namespace SkillsUSAPizzaTask
             //valid Int32 returns input valid becomes false if not valid, and become true if is, 
             //pizza also gets the int value if valid
             customer = customerName.Text;
-
+            totalPrice = 0.00f;
             if (customer == "")
             {
                 MessageBox.Show("Please Enter a Customer Name.");
@@ -197,10 +211,11 @@ namespace SkillsUSAPizzaTask
             }
             else
             {
-                pizza2size = "Large $15.95";
                 pizza2MedCheck.Checked = false;
                 pizza2SmallCheck.Checked = false;
                 pizza2Price = 15.95f;
+                pizza2size = "Large $15.95";
+
             }
         }
 
@@ -212,10 +227,10 @@ namespace SkillsUSAPizzaTask
             }
             else
             {
-                pizza2size = "Medium $12.95";
                 pizza2LargeCheck.Checked = false;
                 pizza2SmallCheck.Checked = false;
-                pizza2Price = 15.95f;
+                pizza2Price = 12.95f;
+                pizza2size = "Medium $12.95";
             }
         }
 
@@ -223,8 +238,12 @@ namespace SkillsUSAPizzaTask
         {
             if (pizza1RoundCheck.Checked == true)
             {
-                pizza1shape = "Round";
                 pizza1SquareCheck.Checked = false;
+                pizza1shape = "Round";
+            }
+            else
+            {
+                pizza1shape = "";
             }
         }
 
@@ -233,8 +252,13 @@ namespace SkillsUSAPizzaTask
         {
             if(pizza1SquareCheck.Checked == true)
             {
-                pizza1shape = "Square";
+
                 pizza1RoundCheck.Checked = false;
+                pizza1shape = "Square";
+            }
+            else
+            {
+                pizza1shape = "";
             }
         }
 
@@ -242,8 +266,12 @@ namespace SkillsUSAPizzaTask
         {
             if (pizza1ThickCheck.Checked == true)
             {
-                pizza1crust = "Thick";
                 pizza1ThinCheck.Checked = false;
+                pizza1crust = "Thick";
+            }
+            else
+            {
+                pizza1crust = "";
             }
         }
 
@@ -251,8 +279,12 @@ namespace SkillsUSAPizzaTask
         {
             if (pizza1ThinCheck.Checked == true)
             {
-                pizza1crust = "Thin";
                 pizza1ThickCheck.Checked = false;
+                pizza1crust = "Thin";
+            }
+            else
+            {
+                pizza1crust = "";
             }
         }
 
@@ -260,8 +292,12 @@ namespace SkillsUSAPizzaTask
         {
             if(pizza2RoundCheck.Checked == true)
             {
-                pizza2shape = "Square";
                 pizza2SquareCheck.Checked = false;
+                pizza2shape = "Square";
+            }
+            else
+            {
+                pizza2shape = "";
             }
         }
 
@@ -269,8 +305,12 @@ namespace SkillsUSAPizzaTask
         {
             if (pizza2SquareCheck.Checked == true)
             {
-                pizza2shape = "Square";
                 pizza2RoundCheck.Checked = false;
+                pizza2shape = "Square";
+            }
+            else
+            {
+                pizza2shape = "";
             }
         }
 
@@ -278,8 +318,12 @@ namespace SkillsUSAPizzaTask
         {
             if (pizza2ThickCheck.Checked == true)
             {
-                pizza2shape = "Square";
                 pizza2ThinCheck.Checked = false;
+                pizza2crust = "Thick";
+            }
+            else
+            {
+                pizza2crust = "";
             }
         }
 
@@ -287,8 +331,12 @@ namespace SkillsUSAPizzaTask
         {
             if (pizza2ThinCheck.Checked == true)
             {
-                pizza2shape = "Square";
                 pizza2ThickCheck.Checked = false;
+                pizza2crust = "Thin";
+            }
+            else
+            {
+                pizza2crust = "";
             }
         }
 
@@ -299,11 +347,11 @@ namespace SkillsUSAPizzaTask
                 pizza2size = "";
             }
             else
-            {
-                pizza2size = "Small 10.95";
+            {               
                 pizza2MedCheck.Checked = false;
                 pizza2LargeCheck.Checked = false;
-                pizza2Price = 15.95f;
+                pizza2Price = 10.95f;
+                pizza2size = "Small $10.95";
             }
         }
 
@@ -339,10 +387,10 @@ namespace SkillsUSAPizzaTask
             }
             else
             {
-                pizza1size = "Large 15.95";
                 pizza1MedCheck.Checked = false;
                 pizza1SmallCheck.Checked = false;
                 pizza1Price = 15.95f;
+                pizza1size = "Large $15.95";
             }
 
 
@@ -356,10 +404,10 @@ namespace SkillsUSAPizzaTask
             }
             else
             {
-                pizza1size = "Medium 12.95";
                 pizza1LargeCheck.Checked = false;
                 pizza1SmallCheck.Checked = false;
                 pizza1Price = 12.95f;
+                pizza1size = "Medium $12.95";
             }
             
         }
@@ -372,12 +420,42 @@ namespace SkillsUSAPizzaTask
             }
             else
             {
-                pizza1size = "Small 10.95";
                 pizza1LargeCheck.Checked = false;
                 pizza1MedCheck.Checked = false;
                 pizza1Price = 10.95f;
+                pizza1size = "Small $10.95";
             }
             
+        }
+        public void clearForm1()
+        {
+            pizza1ToppingIn.Text = "0";
+            pizza2ToppingIn.Text = "0";
+
+            numPizzas.Text = "";
+            customerName.Text = "";
+
+            visible_labels(pizza1Labels, false);
+            visible_labels(pizza2Labels, false);
+            visible_checkboxes(pizza2CheckBoxes, false);
+            visible_checkboxes(pizza1CheckBoxes, false);
+            checked_boxes(pizza2CheckBoxes, false);
+            checked_boxes(pizza1CheckBoxes, false);
+
+            pizza1ToppingIn.Visible = false;
+            pizza2ToppingIn.Visible = false;
+            pizza1Price = 0.00f;
+            pizza2Price = 0.00f;
+            totalPrice = 0.00f;
+
+            pizza1crust = "";
+            pizza2crust = "";
+            pizza1shape = "";
+            pizza2shape = "";
+            pizza1output = "";
+            pizza2output = "";
+            pizza1size = "";
+            pizza2size = "";
         }
     }
 }
