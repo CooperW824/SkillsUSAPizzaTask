@@ -24,7 +24,7 @@ namespace SkillsUSAPizzaTask
         string pizza1crust = "", pizza2crust = "";
         string pizza1shape = "", pizza2shape = "";
         string pizza1output = "", pizza2output = "";
-
+        float totalPrice = 0.00f;
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -169,6 +169,60 @@ namespace SkillsUSAPizzaTask
             }
         }
 
+        private void pizza1ThickCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza1ThickCheck.Checked == true)
+            {
+                pizza1crust = "Thick";
+                pizza1ThinCheck.Checked = false;
+            }
+        }
+
+        private void pizza1ThinCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza1ThinCheck.Checked == true)
+            {
+                pizza1crust = "Thin";
+                pizza1ThickCheck.Checked = false;
+            }
+        }
+
+        private void pizza2RoundCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if(pizza2RoundCheck.Checked == true)
+            {
+                pizza2shape = "Square";
+                pizza2SquareCheck.Checked = false;
+            }
+        }
+
+        private void pizza2SquareCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza2SquareCheck.Checked == true)
+            {
+                pizza2shape = "Square";
+                pizza2RoundCheck.Checked = false;
+            }
+        }
+
+        private void pizza2ThickCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza2ThickCheck.Checked == true)
+            {
+                pizza2shape = "Square";
+                pizza2ThinCheck.Checked = false;
+            }
+        }
+
+        private void pizza2ThinCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pizza2ThinCheck.Checked == true)
+            {
+                pizza2shape = "Square";
+                pizza2ThickCheck.Checked = false;
+            }
+        }
+
         private void pizza2SmallCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza2SmallCheck.Checked == false)
@@ -227,7 +281,7 @@ namespace SkillsUSAPizzaTask
 
         private void pizza1MedCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (pizza1LargeCheck.Checked == false)
+            if (pizza1MedCheck.Checked == false)
             {
                 pizza1size = false;
             }
@@ -243,7 +297,7 @@ namespace SkillsUSAPizzaTask
 
         private void pizza1SmallCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (pizza1LargeCheck.Checked == false)
+            if (pizza1SmallCheck.Checked == false)
             {
                 pizza1size = false;
             }

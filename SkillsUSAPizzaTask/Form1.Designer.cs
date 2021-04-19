@@ -440,6 +440,7 @@
             this.pizza1ThickCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1ThickCheck.TabIndex = 50;
             this.pizza1ThickCheck.UseVisualStyleBackColor = true;
+            this.pizza1ThickCheck.CheckedChanged += new System.EventHandler(this.pizza1ThickCheck_CheckedChanged);
             // 
             // pizza1ThinCheck
             // 
@@ -449,6 +450,7 @@
             this.pizza1ThinCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1ThinCheck.TabIndex = 51;
             this.pizza1ThinCheck.UseVisualStyleBackColor = true;
+            this.pizza1ThinCheck.CheckedChanged += new System.EventHandler(this.pizza1ThinCheck_CheckedChanged);
             // 
             // pizza2LargeCheck
             // 
@@ -488,6 +490,7 @@
             this.pizza2RoundCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2RoundCheck.TabIndex = 55;
             this.pizza2RoundCheck.UseVisualStyleBackColor = true;
+            this.pizza2RoundCheck.CheckedChanged += new System.EventHandler(this.pizza2RoundCheck_CheckedChanged);
             // 
             // pizza2SquareCheck
             // 
@@ -497,6 +500,7 @@
             this.pizza2SquareCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2SquareCheck.TabIndex = 56;
             this.pizza2SquareCheck.UseVisualStyleBackColor = true;
+            this.pizza2SquareCheck.CheckedChanged += new System.EventHandler(this.pizza2SquareCheck_CheckedChanged);
             // 
             // pizza2ThickCheck
             // 
@@ -506,6 +510,7 @@
             this.pizza2ThickCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2ThickCheck.TabIndex = 57;
             this.pizza2ThickCheck.UseVisualStyleBackColor = true;
+            this.pizza2ThickCheck.CheckedChanged += new System.EventHandler(this.pizza2ThickCheck_CheckedChanged);
             // 
             // pizza2ThinCheck
             // 
@@ -515,6 +520,7 @@
             this.pizza2ThinCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2ThinCheck.TabIndex = 58;
             this.pizza2ThinCheck.UseVisualStyleBackColor = true;
+            this.pizza2ThinCheck.CheckedChanged += new System.EventHandler(this.pizza2ThinCheck_CheckedChanged);
             // 
             // pizza1ToppingIn
             // 
