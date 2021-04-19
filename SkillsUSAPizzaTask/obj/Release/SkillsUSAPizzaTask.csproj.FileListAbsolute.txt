@@ -1,0 +1,11 @@
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\bin\Release\SkillsUSAPizzaTask.exe.config
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\bin\Release\SkillsUSAPizzaTask.exe
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\bin\Release\SkillsUSAPizzaTask.pdb
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.csprojAssemblyReference.cache
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.MainForm.resources
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.OutputForm.resources
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.Properties.Resources.resources
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.csproj.GenerateResource.cache
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.csproj.CoreCompileInputs.cache
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.exe
+C:\Users\coope\Documents\GitHub\SkillsUSAPizzaTask\SkillsUSAPizzaTask\SkillsUSAPizzaTask\obj\Release\SkillsUSAPizzaTask.pdb
