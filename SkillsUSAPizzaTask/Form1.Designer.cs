@@ -1,6 +1,6 @@
 ﻿namespace SkillsUSAPizzaTask
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -76,7 +76,7 @@
             this.pizza2ThickCheck = new System.Windows.Forms.CheckBox();
             this.pizza2ThinCheck = new System.Windows.Forms.CheckBox();
             this.pizza1ToppingIn = new System.Windows.Forms.TextBox();
-            this.pizza2ToppingCheck = new System.Windows.Forms.TextBox();
+            this.pizza2ToppingIn = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -389,6 +389,7 @@
             this.pizza1LargeCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1LargeCheck.TabIndex = 45;
             this.pizza1LargeCheck.UseVisualStyleBackColor = true;
+            this.pizza1LargeCheck.CheckedChanged += new System.EventHandler(this.pizza1LargeCheck_CheckedChanged);
             // 
             // pizza1MedCheck
             // 
@@ -398,6 +399,7 @@
             this.pizza1MedCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1MedCheck.TabIndex = 46;
             this.pizza1MedCheck.UseVisualStyleBackColor = true;
+            this.pizza1MedCheck.CheckedChanged += new System.EventHandler(this.pizza1MedCheck_CheckedChanged);
             // 
             // pizza1SmallCheck
             // 
@@ -408,6 +410,7 @@
             this.pizza1SmallCheck.TabIndex = 47;
             this.pizza1SmallCheck.Text = "\r\n";
             this.pizza1SmallCheck.UseVisualStyleBackColor = true;
+            this.pizza1SmallCheck.CheckedChanged += new System.EventHandler(this.pizza1SmallCheck_CheckedChanged);
             // 
             // pizza1RoundCheck
             // 
@@ -417,6 +420,7 @@
             this.pizza1RoundCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1RoundCheck.TabIndex = 48;
             this.pizza1RoundCheck.UseVisualStyleBackColor = true;
+            this.pizza1RoundCheck.CheckedChanged += new System.EventHandler(this.pizza1RoundCheck_CheckedChanged);
             // 
             // pizza1SquareCheck
             // 
@@ -426,6 +430,7 @@
             this.pizza1SquareCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1SquareCheck.TabIndex = 49;
             this.pizza1SquareCheck.UseVisualStyleBackColor = true;
+            this.pizza1SquareCheck.CheckedChanged += new System.EventHandler(this.pizza1SquareCheck_CheckedChanged);
             // 
             // pizza1ThickCheck
             // 
@@ -435,6 +440,7 @@
             this.pizza1ThickCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1ThickCheck.TabIndex = 50;
             this.pizza1ThickCheck.UseVisualStyleBackColor = true;
+            this.pizza1ThickCheck.CheckedChanged += new System.EventHandler(this.pizza1ThickCheck_CheckedChanged);
             // 
             // pizza1ThinCheck
             // 
@@ -444,6 +450,7 @@
             this.pizza1ThinCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza1ThinCheck.TabIndex = 51;
             this.pizza1ThinCheck.UseVisualStyleBackColor = true;
+            this.pizza1ThinCheck.CheckedChanged += new System.EventHandler(this.pizza1ThinCheck_CheckedChanged);
             // 
             // pizza2LargeCheck
             // 
@@ -453,6 +460,7 @@
             this.pizza2LargeCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2LargeCheck.TabIndex = 52;
             this.pizza2LargeCheck.UseVisualStyleBackColor = true;
+            this.pizza2LargeCheck.CheckedChanged += new System.EventHandler(this.pizza2LargeCheck_CheckedChanged);
             // 
             // pizza2MedCheck
             // 
@@ -462,6 +470,7 @@
             this.pizza2MedCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2MedCheck.TabIndex = 53;
             this.pizza2MedCheck.UseVisualStyleBackColor = true;
+            this.pizza2MedCheck.CheckedChanged += new System.EventHandler(this.pizza2MedCheck_CheckedChanged);
             // 
             // pizza2SmallCheck
             // 
@@ -471,6 +480,7 @@
             this.pizza2SmallCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2SmallCheck.TabIndex = 54;
             this.pizza2SmallCheck.UseVisualStyleBackColor = true;
+            this.pizza2SmallCheck.CheckedChanged += new System.EventHandler(this.pizza2SmallCheck_CheckedChanged);
             // 
             // pizza2RoundCheck
             // 
@@ -480,6 +490,7 @@
             this.pizza2RoundCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2RoundCheck.TabIndex = 55;
             this.pizza2RoundCheck.UseVisualStyleBackColor = true;
+            this.pizza2RoundCheck.CheckedChanged += new System.EventHandler(this.pizza2RoundCheck_CheckedChanged);
             // 
             // pizza2SquareCheck
             // 
@@ -489,6 +500,7 @@
             this.pizza2SquareCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2SquareCheck.TabIndex = 56;
             this.pizza2SquareCheck.UseVisualStyleBackColor = true;
+            this.pizza2SquareCheck.CheckedChanged += new System.EventHandler(this.pizza2SquareCheck_CheckedChanged);
             // 
             // pizza2ThickCheck
             // 
@@ -498,6 +510,7 @@
             this.pizza2ThickCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2ThickCheck.TabIndex = 57;
             this.pizza2ThickCheck.UseVisualStyleBackColor = true;
+            this.pizza2ThickCheck.CheckedChanged += new System.EventHandler(this.pizza2ThickCheck_CheckedChanged);
             // 
             // pizza2ThinCheck
             // 
@@ -507,6 +520,7 @@
             this.pizza2ThinCheck.Size = new System.Drawing.Size(18, 17);
             this.pizza2ThinCheck.TabIndex = 58;
             this.pizza2ThinCheck.UseVisualStyleBackColor = true;
+            this.pizza2ThinCheck.CheckedChanged += new System.EventHandler(this.pizza2ThinCheck_CheckedChanged);
             // 
             // pizza1ToppingIn
             // 
@@ -514,21 +528,23 @@
             this.pizza1ToppingIn.Name = "pizza1ToppingIn";
             this.pizza1ToppingIn.Size = new System.Drawing.Size(36, 22);
             this.pizza1ToppingIn.TabIndex = 59;
+            this.pizza1ToppingIn.Text = "0";
             // 
-            // pizza2ToppingCheck
+            // pizza2ToppingIn
             // 
-            this.pizza2ToppingCheck.Location = new System.Drawing.Point(531, 360);
-            this.pizza2ToppingCheck.Name = "pizza2ToppingCheck";
-            this.pizza2ToppingCheck.Size = new System.Drawing.Size(36, 22);
-            this.pizza2ToppingCheck.TabIndex = 60;
+            this.pizza2ToppingIn.Location = new System.Drawing.Point(531, 360);
+            this.pizza2ToppingIn.Name = "pizza2ToppingIn";
+            this.pizza2ToppingIn.Size = new System.Drawing.Size(36, 22);
+            this.pizza2ToppingIn.TabIndex = 60;
+            this.pizza2ToppingIn.Text = "0";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(619, 677);
-            this.Controls.Add(this.pizza2ToppingCheck);
+            this.Controls.Add(this.pizza2ToppingIn);
             this.Controls.Add(this.pizza1ToppingIn);
             this.Controls.Add(this.pizza2ThinCheck);
             this.Controls.Add(this.pizza2ThickCheck);
@@ -577,8 +593,9 @@
             this.Controls.Add(this.numPizzas);
             this.Controls.Add(this.pizzaNumberLabel);
             this.Controls.Add(this.titleLabel);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Skills Pizza";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,7 +651,7 @@
         private System.Windows.Forms.CheckBox pizza2ThickCheck;
         private System.Windows.Forms.CheckBox pizza2ThinCheck;
         private System.Windows.Forms.TextBox pizza1ToppingIn;
-        private System.Windows.Forms.TextBox pizza2ToppingCheck;
+        private System.Windows.Forms.TextBox pizza2ToppingIn;
     }
 }
 
