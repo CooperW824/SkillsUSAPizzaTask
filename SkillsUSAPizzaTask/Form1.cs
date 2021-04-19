@@ -18,9 +18,9 @@ namespace SkillsUSAPizzaTask
 
         int pizza; //pizza counter variable used for hiding aspects of the form and for displaying number of pizzas
         string customer; //customer name var
+        bool pizza1size = false, pizza2size = false;
         float pizza1Price, pizza2Price;
         float pizza1toppingPrice, pizza2toppingPrice;
-        bool pizza1size, pizza2size;
         string pizza1crust = "", pizza2crust = "";
         string pizza1shape = "", pizza2shape = "";
         string pizza1output = "", pizza2output = "";
@@ -38,8 +38,8 @@ namespace SkillsUSAPizzaTask
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            pizza1ToppingIn.Text = "";
-            pizza2ToppingIn.Text = "";
+            pizza1ToppingIn.Text = "0";
+            pizza2ToppingIn.Text = "0";
 
             numPizzas.Text = "";
             customerName.Text = "";
@@ -53,6 +53,16 @@ namespace SkillsUSAPizzaTask
 
             pizza1ToppingIn.Visible = false;
             pizza2ToppingIn.Visible = false;
+            pizza1Price = 0.00f;
+            pizza2Price = 0.00f;
+            totalPrice = 0.00f;
+
+            pizza1crust = "";
+            pizza2crust = "";
+            pizza1shape = "";
+            pizza2shape = "";
+            pizza1output = ""; 
+            pizza2output = "";
         }
 
         private void orderContinue_Click(object sender, EventArgs e)
