@@ -285,6 +285,8 @@ namespace SkillsUSAPizzaTask
             }
         }
 
+        //function checks if the thick crust check box for pizza 1 is checked or not and changes the other check boxes, pizza1crust var as needed.
+        //same as the function on 223 but for the pizza 1 thick box
         private void pizza1ThickCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza1ThickCheck.Checked == true)
@@ -297,7 +299,8 @@ namespace SkillsUSAPizzaTask
                 pizza1crust = "";
             }
         }
-
+        //function checks if the thin crust check box for pizza 1 is checked or not and changes the other check boxes, pizza1crust var as needed.
+        //same as the function on 223 but for the pizza 1 thin box
         private void pizza1ThinCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza1ThinCheck.Checked == true)
@@ -310,7 +313,8 @@ namespace SkillsUSAPizzaTask
                 pizza1crust = "";
             }
         }
-
+        //function checks if the round shape check box for pizza 2 is checked or not and changes the other check boxes, pizza2shape var as needed.
+        //same as the function on 223 but for the pizza 2 round box
         private void pizza2RoundCheck_CheckedChanged(object sender, EventArgs e)
         {
             if(pizza2RoundCheck.Checked == true)
@@ -323,7 +327,8 @@ namespace SkillsUSAPizzaTask
                 pizza2shape = "";
             }
         }
-
+        //function checks if the square shape check box for pizza 2 is checked or not and changes the other check boxes, pizza2shape var as needed.
+        //same as the function on 223 but for the pizza 2 square box
         private void pizza2SquareCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza2SquareCheck.Checked == true)
@@ -336,7 +341,8 @@ namespace SkillsUSAPizzaTask
                 pizza2shape = "";
             }
         }
-
+        //function checks if the thick crust check box for pizza 2 is checked or not and changes the other check boxes, pizza2crust var as needed.
+        //same as the function on 223 but for the pizza 2 thick box
         private void pizza2ThickCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza2ThickCheck.Checked == true)
@@ -349,7 +355,8 @@ namespace SkillsUSAPizzaTask
                 pizza2crust = "";
             }
         }
-
+        //function checks if the thin crust check box for pizza 2 is checked or not and changes the other check boxes, pizza2crust var as needed.
+        //same as the function on 223 but for the pizza 2 thin box
         private void pizza2ThinCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza2ThinCheck.Checked == true)
@@ -362,7 +369,8 @@ namespace SkillsUSAPizzaTask
                 pizza2crust = "";
             }
         }
-
+        //function checks if the small size check box for pizza 2 is checked or not and changes the other check boxes, pizza2size var, and pizza2price var as needed.
+        //same as the function on 223 but for the pizza 2 small box
         private void pizza2SmallCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza2SmallCheck.Checked == false)
@@ -377,21 +385,36 @@ namespace SkillsUSAPizzaTask
                 pizza2size = "Small $10.95";
             }
         }
-
+        //function takes in an array of checkboxes and checks or unchecks them based on the value of the check param
         private void checked_boxes(CheckBox[] checkBoxes, bool check)
         {
-            for (int i = 0; i < checkBoxes.Length; i++)
+            for (int i = 0; i < checkBoxes.Length; i++) //iterate through the array of check boxes 
             {
-                checkBoxes[i].Checked = check;
+                checkBoxes[i].Checked = check; //check or uncheck the box at the current index based on the value of check
             }
         }
+
+        //function declares the arrays of labels and checkboxes for both pizzas, sets all as invisible on the execution of the program
         private void MainForm_Load(object sender, EventArgs e)
         {
-            pizza1Labels = new Label[12] { pizza1Label, pizza1LargeLabel, pizza1MedLabel, pizza1ShapeLabel, pizza1RoundLabel, pizza1SquareLabel, pizza1ThickLabel, pizza1ThinLabel, pizza1CrustLabel, Pizza1SmallLabel, Pizza1TopNumLabel, Pizza1ToppingLabel };
-            pizza1CheckBoxes = new CheckBox[7] { pizza1LargeCheck, pizza1MedCheck, pizza1RoundCheck, pizza1SmallCheck, pizza1SquareCheck, pizza1ThickCheck, pizza1ThinCheck };
-            pizza2Labels = new Label[12] { pizza2Label, pizza2LargeLabel, pizza2MedLabel, pizza2ShapeLabel, pizza2RoundLabel, pizza2SquareLabel, pizza2ThickLabel, pizza2ThinLabel, pizza2CrustLabel, pizza2SmallLabel, pizza2TopLabel, pizza2ToppingLabel };
-            pizza2CheckBoxes = new CheckBox[7] { pizza2LargeCheck, pizza2MedCheck, pizza2RoundCheck, pizza2SmallCheck, pizza2SquareCheck, pizza2ThickCheck, pizza2ThinCheck };
 
+            //adding values of the check boxes and labels to the appropriate array
+            pizza1Labels = new Label[12] { pizza1Label, pizza1LargeLabel, pizza1MedLabel, pizza1ShapeLabel, 
+                pizza1RoundLabel, pizza1SquareLabel, pizza1ThickLabel, pizza1ThinLabel, pizza1CrustLabel,
+                Pizza1SmallLabel, Pizza1TopNumLabel, Pizza1ToppingLabel };
+
+            pizza1CheckBoxes = new CheckBox[7] { pizza1LargeCheck, pizza1MedCheck, pizza1RoundCheck, 
+                pizza1SmallCheck, pizza1SquareCheck, pizza1ThickCheck, pizza1ThinCheck };
+
+            pizza2Labels = new Label[12] { pizza2Label, pizza2LargeLabel, pizza2MedLabel, pizza2ShapeLabel, 
+                pizza2RoundLabel, pizza2SquareLabel, pizza2ThickLabel, pizza2ThinLabel, pizza2CrustLabel,
+                pizza2SmallLabel, pizza2TopLabel, pizza2ToppingLabel };
+
+            pizza2CheckBoxes = new CheckBox[7] { pizza2LargeCheck, pizza2MedCheck, pizza2RoundCheck,
+                pizza2SmallCheck, pizza2SquareCheck, pizza2ThickCheck, pizza2ThinCheck };
+
+
+            //setting all inputs as invisible
             visible_labels(pizza1Labels, false);
             visible_labels(pizza2Labels, false);
             visible_checkboxes(pizza2CheckBoxes, false);
@@ -401,7 +424,8 @@ namespace SkillsUSAPizzaTask
             pizza2ToppingIn.Visible = false;
 
         }
-
+        //function checks if the large size check box for pizza 1 is checked or not and changes the other check boxes, pizza1size var, and pizza1price var as needed.
+        //same as the function on 223 but for the pizza 1 large box
         private void pizza1LargeCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza1LargeCheck.Checked == false)
@@ -418,7 +442,8 @@ namespace SkillsUSAPizzaTask
 
 
         }
-
+        //function checks if the med size check box for pizza 1 is checked or not and changes the other check boxes, pizza1size var, and pizza1price var as needed.
+        //same as the function on 223 but for the pizza 1 med box
         private void pizza1MedCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza1MedCheck.Checked == false)
@@ -434,7 +459,8 @@ namespace SkillsUSAPizzaTask
             }
             
         }
-
+        //function checks if the small size check box for pizza 1 is checked or not and changes the other check boxes, pizza1size var, and pizza1price var as needed.
+        //same as the function on 223 but for the pizza 1 small box
         private void pizza1SmallCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (pizza1SmallCheck.Checked == false)
@@ -450,14 +476,17 @@ namespace SkillsUSAPizzaTask
             }
             
         }
+
+        //Function resets all values of variables, resets the inputs, hides pizza info inputs 
         public void clearForm1()
         {
-            pizza1ToppingIn.Text = "0";
+            pizza1ToppingIn.Text = "0"; //reset the topping inputs
             pizza2ToppingIn.Text = "0";
 
-            numPizzas.Text = "";
-            customerName.Text = "";
+            numPizzas.Text = ""; //reset the num pizza input
+            customerName.Text = ""; //rset the customer name input
 
+            //hide all the pizza information inputs
             visible_labels(pizza1Labels, false);
             visible_labels(pizza2Labels, false);
             visible_checkboxes(pizza2CheckBoxes, false);
@@ -467,10 +496,13 @@ namespace SkillsUSAPizzaTask
 
             pizza1ToppingIn.Visible = false;
             pizza2ToppingIn.Visible = false;
+
+            //reset prcing variables
             pizza1Price = 0.00f;
             pizza2Price = 0.00f;
             totalPrice = 0.00f;
 
+            //reset output and validation variables
             pizza1crust = "";
             pizza2crust = "";
             pizza1shape = "";
