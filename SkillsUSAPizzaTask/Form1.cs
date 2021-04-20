@@ -156,7 +156,7 @@ namespace SkillsUSAPizzaTask
             {
                 if (!inputValid || pizza > 2 || pizza < 1)
                 {
-                    MessageBox.Show("Please Enter a Valid Number of Pizzas.");
+                    MessageBox.Show("Please Enter a Valid Number of Pizzas. (1 or 2)");
                 }
                 else
                 {
