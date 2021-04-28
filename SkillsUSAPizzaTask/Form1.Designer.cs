@@ -120,7 +120,6 @@
             this.customerName.Name = "customerName";
             this.customerName.Size = new System.Drawing.Size(100, 22);
             this.customerName.TabIndex = 4;
-            this.customerName.TextChanged += new System.EventHandler(this.customerName_TextChanged);
             // 
             // exitButton
             // 
